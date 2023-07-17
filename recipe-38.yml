@@ -58,6 +58,10 @@ rpm:
     # Add your own below:
     # Example:
     # - tilix
+    - python3-psutil    # needed for dconf
+    - langpacks-en      # English langpacks
+    - langpacks-en_GB   # prefered language
+    - alacritty         # terminal emulator
   # These RPMs will be removed from the system image. This step happens during
   # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
   remove:
@@ -78,5 +82,18 @@ firstboot:
   # the "just setup-flatpaks" command from our "custom.just" template file.
   # This is just an example selection:
   flatpaks:
-    - io.github.celluloid_player.Celluloid
-    - org.kde.krita
+    - org.mozilla.firefox                  # internet browser
+    - com.mattjakeman.ExtensionManager     # gnome extension manager
+    - org.libreoffice.LibreOffice          # office
+    - com.github.tchx84.Flatseal           # flatpak  tool
+    - com.bitwarden.desktop                # password tool
+    - com.github.johnfactotum.Foliate      # ebook reader
+    - io.mpv.Mpv                           # movie player
+    - org.filezillaproject.Filezilla       # ftp; scp; sftp client
+    - nz.mega.MEGAsync                     # mega client
+    - io.gitlab.librewolf-community        # privacy browser
+    - org.gnome.Cheese                     # cam tool
+    - com.github.marktext.marktext         # markdown tool
+    - org.gnome.FileRoller                 # (un)archive app
+    - social.whalebird.WhalebirdDesktop    # mastodon client
+    - im.riot.Riot                         # element app; matrix messaging
