@@ -89,13 +89,13 @@ If you want to completely disable yafti, simply set the recipe's `firstboot.yaft
 To rebase an existing Silverblue/Kinoite installation to the latest build:
 
 ```
-sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/pliveyns/my-ublue:latest
+sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/pliveyns/my-ublue-38:latest
 ```
 
 This repository builds date tags as well, so if you want to rebase to a particular day's build:
 
 ```
-sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/pliveyns/my-ublue:20230403
+sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/pliveyns/my-ublue-38:20230403
 ```
 
 The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
@@ -135,6 +135,6 @@ Check the [just website](https://just.systems) for tips on modifying and adding 
 
 These images are signed with sisgstore's [cosign](https://docs.sigstore.dev/cosign/overview/). You can verify the signature by downloading the `cosign.pub` key from this repo and running the following command:
 
-    cosign verify --key cosign.pub ghcr.io/pliveyns/my-ublue
+    cosign verify --key cosign.pub ghcr.io/pliveyns/my-ublue-38
 
 If you're forking this repo, the uBlue website has [instructions](https://ublue.it/making-your-own/) for setting up signing properly.
