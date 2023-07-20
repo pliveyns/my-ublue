@@ -1,3 +1,12 @@
-# Set Dark Mode
 [org/gnome/desktop/interface]
-color-scheme = 'prefer-dark'
+color-scheme='prefer-dark'
+show-battery-percentage=true
+clock-show-weekday=true
+
+[org/gnome/desktop/calendar]
+show-weekdate=true
+
+[org/gnome/desktop/background]
+show-desktop-icons=false
+picture-uri='file:///usr/share/backgrounds/ublue-os/2D/wallpaper-dark.png'
+
