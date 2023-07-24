@@ -6,8 +6,6 @@
 set -oue pipefail
 
 # Your code goes here.
-#echo 'This is an example shell script'
-#echo 'Scripts here will run during build if specified in recipe.yml'
-systemctl enable rpm-ostreed-automatic.timer
-systemctl enable flatpak-system-update.timer
+systemctl unmask dconf-update.service
+systemctl enable dconf-update.service
 
