@@ -5,7 +5,7 @@
 # builds actually ran successfully without any errors!
 set -oue pipefail
 
-# Your code goes here.
-systemctl unmask dconf-update.service
-systemctl enable dconf-update.service
+# Enable dconf-update on first boot.
+#systemctl unmask dconf-update.service
+#systemctl enable dconf-update.service
 
